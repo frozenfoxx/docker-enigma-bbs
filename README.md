@@ -3,7 +3,7 @@
 Docker container that runs [ENiGMA½ BBS Software](https://github.com/NuSkooler/enigma-bbs). All required packages for 
 ENiGMA½ to run successfully are included, and pm2-docker is used to manage the Node.js process.
 
-Docker Hub: [https://hub.docker.com/r/davestephens/enigma-bbs](https://hub.docker.com/r/davestephens/enigma-bbs)
+Docker Hub: [https://hub.docker.com/r/frozenfoxx/enigma-bbs](https://hub.docker.com/r/frozenfoxx/enigma-bbs)
 
 ## Quick Start
 
@@ -14,7 +14,7 @@ Assuming that you have Docker installed, run the following command:
 ````bash
 docker run -d \
   -p 8888:8888 \
-  davestephens/enigma-bbs
+  frozenfoxx/enigma-bbs
 ````
 
 As no config has been supplied, the container will use a basic one so that it starts successfully. ENiGMA½ listens via
@@ -63,7 +63,7 @@ for the mountable volumes - art, config, db, filebase, logs, mail and mods.
         -v ~/my_sweet_bbs/filebase:/enigma-bbs/filebase \
         -v ~/my_sweet_bbs/mods:/enigma-bbs/mods \
         -v ~/my_sweet_bbs/mail:/mail \
-        davestephens/enigma-bbs
+        frozenfoxx/enigma-bbs
     ````
 
 ## Volumes

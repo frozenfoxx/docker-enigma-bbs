@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Dave Stephens <dave@force9.org>
+MAINTAINER FrozenFOXX <frozenfoxx@churchoffoxx.net>
 
 ENV NVM_DIR /root/.nvm
 ENV NVM_VERSION v0.33.7

@@ -2,7 +2,7 @@ version: "3"
 services:
 
   bbs:
-    image: davestephens/enigma-bbs
+    image: frozenfoxx/enigma-bbs
     network_mode: "host"
     deploy:
       restart_policy:
