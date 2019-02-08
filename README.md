@@ -7,8 +7,6 @@ Docker Hub: [https://hub.docker.com/r/frozenfoxx/enigma-bbs](https://hub.docker.
 
 ## Quick Start
 
-This container image is available from the Docker Hub.
-
 Assuming that you have Docker installed, run the following command:
 
 ````bash
@@ -17,8 +15,7 @@ docker run -d \
   frozenfoxx/enigma-bbs
 ````
 
-As no config has been supplied, the container will use a basic one so that it starts successfully. ENiGMA½ listens via
-telnet on port 8888. Connect and try it out!
+As no config has been supplied the container will use a basic one so that it starts successfully. ENiGMA½ listens via telnet on port 8888. Connect and try it out!
 
 ## A Proper Setup
 
@@ -29,7 +26,7 @@ for the mountable volumes - art, config, db, filebase, logs, mail and mods.
 
 2. Create a config.hjson file within the config directory you created. See the ENiGMA½ docs for available options.
 
-3. Copy any customisations such as themes and mods, to the mods directory.
+3. Copy any customizations such as themes and mods, to the mods directory.
 
     You should end up with a structure something like the following:
     
@@ -82,7 +79,7 @@ The following volumes are mountable:
 
 ## TODO
 
-* Any more space optimisations?
+* Any more space optimizations?
 * Install packages for mods on container init
 
 ## License 
