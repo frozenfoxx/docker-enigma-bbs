@@ -47,8 +47,9 @@ COPY config/* /enigma-bbs/misc/
 COPY scripts/enigma_config.sh /enigma-bbs/misc/enigma_config.sh
 RUN chmod +x /enigma-bbs/misc/enigma_config.sh
 
-# Enigma default port
+# Enigma default ports
 EXPOSE 8888
+EXPOSE 8889
 
 WORKDIR /enigma-bbs
 
