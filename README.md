@@ -24,7 +24,11 @@ So you've decided ENiGMA½ (and Docker) is for you, and you want a "proper" setu
 1. Create a directory on your Docker host machine to store ENiGMA½ data, e.g. ~/my_sweet_bbs. Within that, create directories
 for the mountable volumes - art, config, db, filebase, logs, mail and mods.
 
-2. Create a config.hjson file within the config directory you created. See the ENiGMA½ docs for available options.
+2. Create the following files within the config directory you created. See the ENiGMA½ docs for available options.
+
+* `config.hjson`
+* `menu.hjson`
+* `prompt.hjson`
 
 3. Copy any customizations such as themes and mods, to the mods directory.
 
@@ -77,9 +81,8 @@ The following volumes are mountable:
 | /enigma-bbs/mods        | ENiGMA mods                                                          |
 | /mail                   | FTN mail (for use with an external mailer)                           |
 
-## TODO
+## Limitations
 
-* Any more space optimizations?
 * Install packages for mods on container init
 
 ## License 
