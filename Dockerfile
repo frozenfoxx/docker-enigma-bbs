@@ -1,13 +1,14 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER FrozenFOXX <frozenfoxx@churchoffoxx.net>
 
+# Variables
 ENV NVM_DIR /root/.nvm
-ENV NVM_VERSION v0.33.7
-ENV NODE_VERSION 8
-ENV ENIGMA_BRANCH 0.0.9-alpha
+ENV NODE_VERSION 10
+ENV ENIGMA_BRANCH 0.0.10-alpha
+ENV DEBIAN_FRONTEND noninteractive
 
-# Do some installing!
+# Installation
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -19,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     lhasa \
     unrar-free \
     p7zip-full \
-  && curl -O https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/install.sh \
+  && curl -O https://raw.githubusercontent.com/creationix/nvm/master/install.sh \
   && chmod +x ./install.sh && ./install.sh && rm install.sh \
   && . ~/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm install -g pm2 \
   && git clone https://github.com/NuSkooler/enigma-bbs.git --depth 1 --branch $ENIGMA_BRANCH \
@@ -40,10 +41,10 @@ VOLUME /enigma-bbs/logs
 VOLUME /enigma-bbs/mods
 VOLUME /mail
 
-# copy base config
+# Copy base config
 COPY config/* /enigma-bbs/misc/
 
-# set up config init script
+# Set up config init script
 COPY scripts/enigma_config.sh /enigma-bbs/misc/enigma_config.sh
 RUN chmod +x /enigma-bbs/misc/enigma_config.sh
 
