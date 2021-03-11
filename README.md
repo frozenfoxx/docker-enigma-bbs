@@ -1,5 +1,7 @@
 # ENiGMA BBS
 
+[![Build Status](https://cloud.drone.io/api/badges/frozenfoxx/docker-enigma-bbs/status.svg?ref=refs/heads/main)](https://cloud.drone.io/frozenfoxx/docker-enigma-bbs)
+
 Docker container that runs [ENiGMA½ BBS Software](https://github.com/NuSkooler/enigma-bbs). All required packages for 
 ENiGMA½ to run successfully are included, and pm2-docker is used to manage the Node.js process.
 
